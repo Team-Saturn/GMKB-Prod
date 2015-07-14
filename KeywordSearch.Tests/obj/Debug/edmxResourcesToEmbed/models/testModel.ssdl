@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaturnModelUnitTest.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cases">
+    <Key>
+      <PropertyRef Name="RecId" />
+    </Key>
+    <Property Name="RecId" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="LastModDateTime" Type="datetime" />
+    <Property Name="LastModBy" Type="varchar" MaxLength="30" />
+    <Property Name="CreatedDateTime" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="30" />
+    <Property Name="OwnerType" Type="varchar" MaxLength="30" />
+    <Property Name="Owner" Type="varchar" MaxLength="30" />
+    <Property Name="Owner_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="OwnerTeam" Type="varchar" MaxLength="30" />
+    <Property Name="OwnerTeam_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="CaseNumber" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="Status" Type="varchar" MaxLength="60" />
+    <Property Name="Status_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="Priority" Type="varchar" MaxLength="3" />
+    <Property Name="Priority_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="CaseType" Type="varchar" MaxLength="60" />
+    <Property Name="CaseType_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="Category" Type="varchar" MaxLength="100" />
+    <Property Name="Category_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="Source" Type="varchar" MaxLength="100" />
+    <Property Name="Source_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="Subject" Type="varchar" MaxLength="200" />
+    <Property Name="Description" Type="text" />
+    <Property Name="DueOn" Type="datetime" />
+    <Property Name="DueOn_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="CauseCode" Type="varchar" MaxLength="100" />
+    <Property Name="CauseCode_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="Resolution" Type="text" />
+    <Property Name="FirstCallResolution" Type="varchar" MaxLength="25" />
+    <Property Name="FirstCallResolution_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="ResolutionCategory" Type="varchar" MaxLength="100" />
+    <Property Name="ResolutionCategory_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="ContactLink_RecID" Type="varchar" MaxLength="32" />
+    <Property Name="ContactLink_Category" Type="varchar" MaxLength="61" />
+    <Property Name="ContactLink_VRecID" Type="varchar" MaxLength="32" />
+    <Property Name="ContactEmail" Type="varchar" MaxLength="150" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="25" />
+    <Property Name="ContactExt" Type="varchar" MaxLength="25" />
+    <Property Name="ClosedBy" Type="varchar" MaxLength="30" />
+    <Property Name="ClosedDateTime" Type="datetime" />
+    <Property Name="PrimaryProductLink_RecID" Type="varchar" MaxLength="32" />
+    <Property Name="PrimaryProductLink_Category" Type="varchar" MaxLength="61" />
+    <Property Name="PrimaryProductLink_VRecID" Type="varchar" MaxLength="32" />
+    <Property Name="IPCCContactLink" Type="varchar" MaxLength="32" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="255" />
+    <Property Name="PrimaryEmail" Type="varchar" MaxLength="100" />
+    <Property Name="CaseAccount" Type="varchar" MaxLength="40" />
+    <Property Name="EmpLink_RecID" Type="varchar" MaxLength="32" />
+    <Property Name="EmpLink_Category" Type="varchar" MaxLength="61" />
+    <Property Name="EmpLink_VRecID" Type="varchar" MaxLength="32" />
+    <Property Name="McMAtRisk" Type="bit" />
+    <Property Name="McMProduct" Type="varchar" MaxLength="25" />
+    <Property Name="McMProduct_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="BugzillaProduct" Type="varchar" MaxLength="25" />
+    <Property Name="BugzillaComponent" Type="varchar" MaxLength="25" />
+    <Property Name="McM_AutoClosedDateTime" Type="datetime" />
+    <Property Name="OwnerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="McM_data_center" Type="varchar" MaxLength="25" />
+    <Property Name="BugzillaBank" Type="varchar" MaxLength="75" />
+    <Property Name="McM_Anonymous_Flag" Type="bit" />
+    <Property Name="McM_Sent_From_Email" Type="varchar" MaxLength="150" />
+    <Property Name="McM_Sent_To_Email" Type="varchar" MaxLength="150" />
+    <Property Name="Department" Type="varchar" MaxLength="70" />
+    <Property Name="Department_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="McM_csi" Type="varchar" MaxLength="25" />
+    <Property Name="AccountLink_RecID" Type="varchar" MaxLength="32" />
+    <Property Name="AccountLink_Category" Type="varchar" MaxLength="61" />
+    <Property Name="AccountLink_VRecID" Type="varchar" MaxLength="32" />
+    <Property Name="McMGridRowColor" Type="varchar" MaxLength="25" />
+    <Property Name="McM_DateTime_Active" Type="datetime" />
+    <Property Name="McM_DateTime_InProgress" Type="datetime" />
+    <Property Name="McM_DateTime_Resolved" Type="datetime" />
+    <Property Name="McM_DateTime_Closed" Type="datetime" />
+    <Property Name="McM_Duration_from_Active" Type="int" />
+    <Property Name="McM_Duration_from_Logged" Type="int" />
+    <Property Name="McM_Duration_from_InProgress" Type="int" />
+    <Property Name="McM_Duration_from_Resolved" Type="int" />
+    <Property Name="McM_Twenty_Mins_from_Logged" Type="datetime" />
+    <Property Name="McM_ML_Connection" Type="bit" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="25" />
+    <Property Name="EOY" Type="bit" />
+    <Property Name="NightCall" Type="bit" />
+    <Property Name="UsedOverride" Type="bit" />
+    <Property Name="MaintCustData" Type="bit" />
+    <Property Name="WebexUsed" Type="bit" />
+    <Property Name="McM_DateTime_Reopened" Type="datetime" />
+    <Property Name="McM_Twenty_Mins" Type="datetime" />
+    <Property Name="McM_Reopened_Flag" Type="bit" />
+    <Property Name="McM_Confidential" Type="text" />
+    <Property Name="McM_Note_Alert" Type="varchar" MaxLength="25" />
+    <Property Name="McM_Fifteen_Mins_from_Logged" Type="datetime" />
+    <Property Name="McM_WaitStatus_Alert" Type="datetime" />
+    <Property Name="Speed_dial" Type="varchar" MaxLength="8" />
+    <Property Name="McM_SetupTraining" Type="bit" />
+    <Property Name="McM_Twenty_Mins_Logical" Type="bit" />
+    <Property Name="McM_Fifteen_Mins_Logical" Type="bit" />
+    <Property Name="McM_QandD_Logical" Type="bit" />
+    <Property Name="McM_QandD_Text" Type="varchar" MaxLength="50" />
+    <Property Name="McM_Secon_Level_Support" Type="bit" />
+    <Property Name="McM_Programming_Assistance" Type="bit" />
+    <Property Name="McM_Training_logical" Type="bit" />
+    <Property Name="McM_Projects_logical" Type="bit" />
+    <Property Name="McM_Verifications_logical" Type="bit" />
+    <Property Name="McM_Deployment_logical" Type="bit" />
+    <Property Name="McM_AtRiskReason_Text" Type="varchar" MaxLength="50" />
+    <Property Name="McM_Cause" Type="varchar" MaxLength="25" />
+    <Property Name="McM_Cause_Valid" Type="varchar" MaxLength="32" />
+    <Property Name="CaseSurveySent" Type="bit" />
+    <Property Name="TransferLogical" Type="bit" />
+    <Property Name="McM_BugNumber" Type="varchar" MaxLength="25" />
+    <Property Name="McM_BillPay_Customer" Type="varchar" MaxLength="50" />
+    <Property Name="McM_IS_Tech" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="SaturnModelUnitTestStoreContainer">
+    <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

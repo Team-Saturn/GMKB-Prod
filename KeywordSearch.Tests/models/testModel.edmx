@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SaturnModelUnitTest.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cases">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="LastModDateTime" Type="datetime" />
+          <Property Name="LastModBy" Type="varchar" MaxLength="30" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="30" />
+          <Property Name="OwnerType" Type="varchar" MaxLength="30" />
+          <Property Name="Owner" Type="varchar" MaxLength="30" />
+          <Property Name="Owner_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="OwnerTeam" Type="varchar" MaxLength="30" />
+          <Property Name="OwnerTeam_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="CaseNumber" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="Status" Type="varchar" MaxLength="60" />
+          <Property Name="Status_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Priority" Type="varchar" MaxLength="3" />
+          <Property Name="Priority_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="CaseType" Type="varchar" MaxLength="60" />
+          <Property Name="CaseType_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Category" Type="varchar" MaxLength="100" />
+          <Property Name="Category_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Source" Type="varchar" MaxLength="100" />
+          <Property Name="Source_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Subject" Type="varchar" MaxLength="200" />
+          <Property Name="Description" Type="text" />
+          <Property Name="DueOn" Type="datetime" />
+          <Property Name="DueOn_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="CauseCode" Type="varchar" MaxLength="100" />
+          <Property Name="CauseCode_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Resolution" Type="text" />
+          <Property Name="FirstCallResolution" Type="varchar" MaxLength="25" />
+          <Property Name="FirstCallResolution_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="ResolutionCategory" Type="varchar" MaxLength="100" />
+          <Property Name="ResolutionCategory_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="ContactLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="ContactLink_Category" Type="varchar" MaxLength="61" />
+          <Property Name="ContactLink_VRecID" Type="varchar" MaxLength="32" />
+          <Property Name="ContactEmail" Type="varchar" MaxLength="150" />
+          <Property Name="ContactPhone" Type="varchar" MaxLength="25" />
+          <Property Name="ContactExt" Type="varchar" MaxLength="25" />
+          <Property Name="ClosedBy" Type="varchar" MaxLength="30" />
+          <Property Name="ClosedDateTime" Type="datetime" />
+          <Property Name="PrimaryProductLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="PrimaryProductLink_Category" Type="varchar" MaxLength="61" />
+          <Property Name="PrimaryProductLink_VRecID" Type="varchar" MaxLength="32" />
+          <Property Name="IPCCContactLink" Type="varchar" MaxLength="32" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="255" />
+          <Property Name="PrimaryEmail" Type="varchar" MaxLength="100" />
+          <Property Name="CaseAccount" Type="varchar" MaxLength="40" />
+          <Property Name="EmpLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="EmpLink_Category" Type="varchar" MaxLength="61" />
+          <Property Name="EmpLink_VRecID" Type="varchar" MaxLength="32" />
+          <Property Name="McMAtRisk" Type="bit" />
+          <Property Name="McMProduct" Type="varchar" MaxLength="25" />
+          <Property Name="McMProduct_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="BugzillaProduct" Type="varchar" MaxLength="25" />
+          <Property Name="BugzillaComponent" Type="varchar" MaxLength="25" />
+          <Property Name="McM_AutoClosedDateTime" Type="datetime" />
+          <Property Name="OwnerEmail" Type="varchar" MaxLength="100" />
+          <Property Name="McM_data_center" Type="varchar" MaxLength="25" />
+          <Property Name="BugzillaBank" Type="varchar" MaxLength="75" />
+          <Property Name="McM_Anonymous_Flag" Type="bit" />
+          <Property Name="McM_Sent_From_Email" Type="varchar" MaxLength="150" />
+          <Property Name="McM_Sent_To_Email" Type="varchar" MaxLength="150" />
+          <Property Name="Department" Type="varchar" MaxLength="70" />
+          <Property Name="Department_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="McM_csi" Type="varchar" MaxLength="25" />
+          <Property Name="AccountLink_RecID" Type="varchar" MaxLength="32" />
+          <Property Name="AccountLink_Category" Type="varchar" MaxLength="61" />
+          <Property Name="AccountLink_VRecID" Type="varchar" MaxLength="32" />
+          <Property Name="McMGridRowColor" Type="varchar" MaxLength="25" />
+          <Property Name="McM_DateTime_Active" Type="datetime" />
+          <Property Name="McM_DateTime_InProgress" Type="datetime" />
+          <Property Name="McM_DateTime_Resolved" Type="datetime" />
+          <Property Name="McM_DateTime_Closed" Type="datetime" />
+          <Property Name="McM_Duration_from_Active" Type="int" />
+          <Property Name="McM_Duration_from_Logged" Type="int" />
+          <Property Name="McM_Duration_from_InProgress" Type="int" />
+          <Property Name="McM_Duration_from_Resolved" Type="int" />
+          <Property Name="McM_Twenty_Mins_from_Logged" Type="datetime" />
+          <Property Name="McM_ML_Connection" Type="bit" />
+          <Property Name="ApprovedBy" Type="varchar" MaxLength="25" />
+          <Property Name="EOY" Type="bit" />
+          <Property Name="NightCall" Type="bit" />
+          <Property Name="UsedOverride" Type="bit" />
+          <Property Name="MaintCustData" Type="bit" />
+          <Property Name="WebexUsed" Type="bit" />
+          <Property Name="McM_DateTime_Reopened" Type="datetime" />
+          <Property Name="McM_Twenty_Mins" Type="datetime" />
+          <Property Name="McM_Reopened_Flag" Type="bit" />
+          <Property Name="McM_Confidential" Type="text" />
+          <Property Name="McM_Note_Alert" Type="varchar" MaxLength="25" />
+          <Property Name="McM_Fifteen_Mins_from_Logged" Type="datetime" />
+          <Property Name="McM_WaitStatus_Alert" Type="datetime" />
+          <Property Name="Speed_dial" Type="varchar" MaxLength="8" />
+          <Property Name="McM_SetupTraining" Type="bit" />
+          <Property Name="McM_Twenty_Mins_Logical" Type="bit" />
+          <Property Name="McM_Fifteen_Mins_Logical" Type="bit" />
+          <Property Name="McM_QandD_Logical" Type="bit" />
+          <Property Name="McM_QandD_Text" Type="varchar" MaxLength="50" />
+          <Property Name="McM_Secon_Level_Support" Type="bit" />
+          <Property Name="McM_Programming_Assistance" Type="bit" />
+          <Property Name="McM_Training_logical" Type="bit" />
+          <Property Name="McM_Projects_logical" Type="bit" />
+          <Property Name="McM_Verifications_logical" Type="bit" />
+          <Property Name="McM_Deployment_logical" Type="bit" />
+          <Property Name="McM_AtRiskReason_Text" Type="varchar" MaxLength="50" />
+          <Property Name="McM_Cause" Type="varchar" MaxLength="25" />
+          <Property Name="McM_Cause_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="CaseSurveySent" Type="bit" />
+          <Property Name="TransferLogical" Type="bit" />
+          <Property Name="McM_BugNumber" Type="varchar" MaxLength="25" />
+          <Property Name="McM_BillPay_Customer" Type="varchar" MaxLength="50" />
+          <Property Name="McM_IS_Tech" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="SaturnModelUnitTestStoreContainer">
+          <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SaturnModelUnitTest" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Case">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="RecId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="LastModDateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastModBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Owner" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Owner_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerTeam" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerTeam_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CaseNumber" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Status" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Priority" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Priority_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CaseType" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CaseType_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Category_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Source_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DueOn" Type="DateTime" Precision="3" />
+          <Property Name="DueOn_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CauseCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CauseCode_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FirstCallResolution" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="FirstCallResolution_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ResolutionCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ResolutionCategory_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ContactLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ContactLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="ContactLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ContactEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ContactExt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="PrimaryProductLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryProductLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryProductLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="IPCCContactLink" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PrimaryEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CaseAccount" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="EmpLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="EmpLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="EmpLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="McMAtRisk" Type="Boolean" />
+          <Property Name="McMProduct" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McMProduct_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="BugzillaProduct" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="BugzillaComponent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McM_AutoClosedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="OwnerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="McM_data_center" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="BugzillaBank" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Anonymous_Flag" Type="Boolean" />
+          <Property Name="McM_Sent_From_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Sent_To_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Department_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="McM_csi" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="AccountLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="AccountLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="AccountLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="McMGridRowColor" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McM_DateTime_Active" Type="DateTime" Precision="3" />
+          <Property Name="McM_DateTime_InProgress" Type="DateTime" Precision="3" />
+          <Property Name="McM_DateTime_Resolved" Type="DateTime" Precision="3" />
+          <Property Name="McM_DateTime_Closed" Type="DateTime" Precision="3" />
+          <Property Name="McM_Duration_from_Active" Type="Int32" />
+          <Property Name="McM_Duration_from_Logged" Type="Int32" />
+          <Property Name="McM_Duration_from_InProgress" Type="Int32" />
+          <Property Name="McM_Duration_from_Resolved" Type="Int32" />
+          <Property Name="McM_Twenty_Mins_from_Logged" Type="DateTime" Precision="3" />
+          <Property Name="McM_ML_Connection" Type="Boolean" />
+          <Property Name="ApprovedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="EOY" Type="Boolean" />
+          <Property Name="NightCall" Type="Boolean" />
+          <Property Name="UsedOverride" Type="Boolean" />
+          <Property Name="MaintCustData" Type="Boolean" />
+          <Property Name="WebexUsed" Type="Boolean" />
+          <Property Name="McM_DateTime_Reopened" Type="DateTime" Precision="3" />
+          <Property Name="McM_Twenty_Mins" Type="DateTime" Precision="3" />
+          <Property Name="McM_Reopened_Flag" Type="Boolean" />
+          <Property Name="McM_Confidential" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Note_Alert" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Fifteen_Mins_from_Logged" Type="DateTime" Precision="3" />
+          <Property Name="McM_WaitStatus_Alert" Type="DateTime" Precision="3" />
+          <Property Name="Speed_dial" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="McM_SetupTraining" Type="Boolean" />
+          <Property Name="McM_Twenty_Mins_Logical" Type="Boolean" />
+          <Property Name="McM_Fifteen_Mins_Logical" Type="Boolean" />
+          <Property Name="McM_QandD_Logical" Type="Boolean" />
+          <Property Name="McM_QandD_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Secon_Level_Support" Type="Boolean" />
+          <Property Name="McM_Programming_Assistance" Type="Boolean" />
+          <Property Name="McM_Training_logical" Type="Boolean" />
+          <Property Name="McM_Projects_logical" Type="Boolean" />
+          <Property Name="McM_Verifications_logical" Type="Boolean" />
+          <Property Name="McM_Deployment_logical" Type="Boolean" />
+          <Property Name="McM_AtRiskReason_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Cause" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McM_Cause_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CaseSurveySent" Type="Boolean" />
+          <Property Name="TransferLogical" Type="Boolean" />
+          <Property Name="McM_BugNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="McM_BillPay_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="McM_IS_Tech" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="SaturnEntitiesTest" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cases" EntityType="Self.Case" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SaturnModelUnitTestStoreContainer" CdmEntityContainer="SaturnEntitiesTest">
+          <EntitySetMapping Name="Cases">
+            <EntityTypeMapping TypeName="SaturnModelUnitTest.Case">
+              <MappingFragment StoreEntitySet="Cases">
+                <ScalarProperty Name="RecId" ColumnName="RecId" />
+                <ScalarProperty Name="LastModDateTime" ColumnName="LastModDateTime" />
+                <ScalarProperty Name="LastModBy" ColumnName="LastModBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="OwnerType" ColumnName="OwnerType" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="Owner_Valid" ColumnName="Owner_Valid" />
+                <ScalarProperty Name="OwnerTeam" ColumnName="OwnerTeam" />
+                <ScalarProperty Name="OwnerTeam_Valid" ColumnName="OwnerTeam_Valid" />
+                <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_Valid" ColumnName="Status_Valid" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Priority_Valid" ColumnName="Priority_Valid" />
+                <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+                <ScalarProperty Name="CaseType_Valid" ColumnName="CaseType_Valid" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Category_Valid" ColumnName="Category_Valid" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Source_Valid" ColumnName="Source_Valid" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DueOn" ColumnName="DueOn" />
+                <ScalarProperty Name="DueOn_Valid" ColumnName="DueOn_Valid" />
+                <ScalarProperty Name="CauseCode" ColumnName="CauseCode" />
+                <ScalarProperty Name="CauseCode_Valid" ColumnName="CauseCode_Valid" />
+                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+                <ScalarProperty Name="FirstCallResolution" ColumnName="FirstCallResolution" />
+                <ScalarProperty Name="FirstCallResolution_Valid" ColumnName="FirstCallResolution_Valid" />
+                <ScalarProperty Name="ResolutionCategory" ColumnName="ResolutionCategory" />
+                <ScalarProperty Name="ResolutionCategory_Valid" ColumnName="ResolutionCategory_Valid" />
+                <ScalarProperty Name="ContactLink_RecID" ColumnName="ContactLink_RecID" />
+                <ScalarProperty Name="ContactLink_Category" ColumnName="ContactLink_Category" />
+                <ScalarProperty Name="ContactLink_VRecID" ColumnName="ContactLink_VRecID" />
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+                <ScalarProperty Name="ContactExt" ColumnName="ContactExt" />
+                <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+                <ScalarProperty Name="ClosedDateTime" ColumnName="ClosedDateTime" />
+                <ScalarProperty Name="PrimaryProductLink_RecID" ColumnName="PrimaryProductLink_RecID" />
+                <ScalarProperty Name="PrimaryProductLink_Category" ColumnName="PrimaryProductLink_Category" />
+                <ScalarProperty Name="PrimaryProductLink_VRecID" ColumnName="PrimaryProductLink_VRecID" />
+                <ScalarProperty Name="IPCCContactLink" ColumnName="IPCCContactLink" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="PrimaryEmail" ColumnName="PrimaryEmail" />
+                <ScalarProperty Name="CaseAccount" ColumnName="CaseAccount" />
+                <ScalarProperty Name="EmpLink_RecID" ColumnName="EmpLink_RecID" />
+                <ScalarProperty Name="EmpLink_Category" ColumnName="EmpLink_Category" />
+                <ScalarProperty Name="EmpLink_VRecID" ColumnName="EmpLink_VRecID" />
+                <ScalarProperty Name="McMAtRisk" ColumnName="McMAtRisk" />
+                <ScalarProperty Name="McMProduct" ColumnName="McMProduct" />
+                <ScalarProperty Name="McMProduct_Valid" ColumnName="McMProduct_Valid" />
+                <ScalarProperty Name="BugzillaProduct" ColumnName="BugzillaProduct" />
+                <ScalarProperty Name="BugzillaComponent" ColumnName="BugzillaComponent" />
+                <ScalarProperty Name="McM_AutoClosedDateTime" ColumnName="McM_AutoClosedDateTime" />
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="McM_data_center" ColumnName="McM_data_center" />
+                <ScalarProperty Name="BugzillaBank" ColumnName="BugzillaBank" />
+                <ScalarProperty Name="McM_Anonymous_Flag" ColumnName="McM_Anonymous_Flag" />
+                <ScalarProperty Name="McM_Sent_From_Email" ColumnName="McM_Sent_From_Email" />
+                <ScalarProperty Name="McM_Sent_To_Email" ColumnName="McM_Sent_To_Email" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Department_Valid" ColumnName="Department_Valid" />
+                <ScalarProperty Name="McM_csi" ColumnName="McM_csi" />
+                <ScalarProperty Name="AccountLink_RecID" ColumnName="AccountLink_RecID" />
+                <ScalarProperty Name="AccountLink_Category" ColumnName="AccountLink_Category" />
+                <ScalarProperty Name="AccountLink_VRecID" ColumnName="AccountLink_VRecID" />
+                <ScalarProperty Name="McMGridRowColor" ColumnName="McMGridRowColor" />
+                <ScalarProperty Name="McM_DateTime_Active" ColumnName="McM_DateTime_Active" />
+                <ScalarProperty Name="McM_DateTime_InProgress" ColumnName="McM_DateTime_InProgress" />
+                <ScalarProperty Name="McM_DateTime_Resolved" ColumnName="McM_DateTime_Resolved" />
+                <ScalarProperty Name="McM_DateTime_Closed" ColumnName="McM_DateTime_Closed" />
+                <ScalarProperty Name="McM_Duration_from_Active" ColumnName="McM_Duration_from_Active" />
+                <ScalarProperty Name="McM_Duration_from_Logged" ColumnName="McM_Duration_from_Logged" />
+                <ScalarProperty Name="McM_Duration_from_InProgress" ColumnName="McM_Duration_from_InProgress" />
+                <ScalarProperty Name="McM_Duration_from_Resolved" ColumnName="McM_Duration_from_Resolved" />
+                <ScalarProperty Name="McM_Twenty_Mins_from_Logged" ColumnName="McM_Twenty_Mins_from_Logged" />
+                <ScalarProperty Name="McM_ML_Connection" ColumnName="McM_ML_Connection" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="EOY" ColumnName="EOY" />
+                <ScalarProperty Name="NightCall" ColumnName="NightCall" />
+                <ScalarProperty Name="UsedOverride" ColumnName="UsedOverride" />
+                <ScalarProperty Name="MaintCustData" ColumnName="MaintCustData" />
+                <ScalarProperty Name="WebexUsed" ColumnName="WebexUsed" />
+                <ScalarProperty Name="McM_DateTime_Reopened" ColumnName="McM_DateTime_Reopened" />
+                <ScalarProperty Name="McM_Twenty_Mins" ColumnName="McM_Twenty_Mins" />
+                <ScalarProperty Name="McM_Reopened_Flag" ColumnName="McM_Reopened_Flag" />
+                <ScalarProperty Name="McM_Confidential" ColumnName="McM_Confidential" />
+                <ScalarProperty Name="McM_Note_Alert" ColumnName="McM_Note_Alert" />
+                <ScalarProperty Name="McM_Fifteen_Mins_from_Logged" ColumnName="McM_Fifteen_Mins_from_Logged" />
+                <ScalarProperty Name="McM_WaitStatus_Alert" ColumnName="McM_WaitStatus_Alert" />
+                <ScalarProperty Name="Speed_dial" ColumnName="Speed_dial" />
+                <ScalarProperty Name="McM_SetupTraining" ColumnName="McM_SetupTraining" />
+                <ScalarProperty Name="McM_Twenty_Mins_Logical" ColumnName="McM_Twenty_Mins_Logical" />
+                <ScalarProperty Name="McM_Fifteen_Mins_Logical" ColumnName="McM_Fifteen_Mins_Logical" />
+                <ScalarProperty Name="McM_QandD_Logical" ColumnName="McM_QandD_Logical" />
+                <ScalarProperty Name="McM_QandD_Text" ColumnName="McM_QandD_Text" />
+                <ScalarProperty Name="McM_Secon_Level_Support" ColumnName="McM_Secon_Level_Support" />
+                <ScalarProperty Name="McM_Programming_Assistance" ColumnName="McM_Programming_Assistance" />
+                <ScalarProperty Name="McM_Training_logical" ColumnName="McM_Training_logical" />
+                <ScalarProperty Name="McM_Projects_logical" ColumnName="McM_Projects_logical" />
+                <ScalarProperty Name="McM_Verifications_logical" ColumnName="McM_Verifications_logical" />
+                <ScalarProperty Name="McM_Deployment_logical" ColumnName="McM_Deployment_logical" />
+                <ScalarProperty Name="McM_AtRiskReason_Text" ColumnName="McM_AtRiskReason_Text" />
+                <ScalarProperty Name="McM_Cause" ColumnName="McM_Cause" />
+                <ScalarProperty Name="McM_Cause_Valid" ColumnName="McM_Cause_Valid" />
+                <ScalarProperty Name="CaseSurveySent" ColumnName="CaseSurveySent" />
+                <ScalarProperty Name="TransferLogical" ColumnName="TransferLogical" />
+                <ScalarProperty Name="McM_BugNumber" ColumnName="McM_BugNumber" />
+                <ScalarProperty Name="McM_BillPay_Customer" ColumnName="McM_BillPay_Customer" />
+                <ScalarProperty Name="McM_IS_Tech" ColumnName="McM_IS_Tech" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

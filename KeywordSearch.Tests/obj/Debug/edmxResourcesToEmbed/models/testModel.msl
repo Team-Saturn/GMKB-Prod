@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SaturnModelUnitTestStoreContainer" CdmEntityContainer="SaturnEntitiesTest">
+    <EntitySetMapping Name="Cases">
+      <EntityTypeMapping TypeName="SaturnModelUnitTest.Case">
+        <MappingFragment StoreEntitySet="Cases">
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="LastModDateTime" ColumnName="LastModDateTime" />
+          <ScalarProperty Name="LastModBy" ColumnName="LastModBy" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="OwnerType" ColumnName="OwnerType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Owner_Valid" ColumnName="Owner_Valid" />
+          <ScalarProperty Name="OwnerTeam" ColumnName="OwnerTeam" />
+          <ScalarProperty Name="OwnerTeam_Valid" ColumnName="OwnerTeam_Valid" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Status_Valid" ColumnName="Status_Valid" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Priority_Valid" ColumnName="Priority_Valid" />
+          <ScalarProperty Name="CaseType" ColumnName="CaseType" />
+          <ScalarProperty Name="CaseType_Valid" ColumnName="CaseType_Valid" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Category_Valid" ColumnName="Category_Valid" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Source_Valid" ColumnName="Source_Valid" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DueOn" ColumnName="DueOn" />
+          <ScalarProperty Name="DueOn_Valid" ColumnName="DueOn_Valid" />
+          <ScalarProperty Name="CauseCode" ColumnName="CauseCode" />
+          <ScalarProperty Name="CauseCode_Valid" ColumnName="CauseCode_Valid" />
+          <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <ScalarProperty Name="FirstCallResolution" ColumnName="FirstCallResolution" />
+          <ScalarProperty Name="FirstCallResolution_Valid" ColumnName="FirstCallResolution_Valid" />
+          <ScalarProperty Name="ResolutionCategory" ColumnName="ResolutionCategory" />
+          <ScalarProperty Name="ResolutionCategory_Valid" ColumnName="ResolutionCategory_Valid" />
+          <ScalarProperty Name="ContactLink_RecID" ColumnName="ContactLink_RecID" />
+          <ScalarProperty Name="ContactLink_Category" ColumnName="ContactLink_Category" />
+          <ScalarProperty Name="ContactLink_VRecID" ColumnName="ContactLink_VRecID" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="ContactExt" ColumnName="ContactExt" />
+          <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+          <ScalarProperty Name="ClosedDateTime" ColumnName="ClosedDateTime" />
+          <ScalarProperty Name="PrimaryProductLink_RecID" ColumnName="PrimaryProductLink_RecID" />
+          <ScalarProperty Name="PrimaryProductLink_Category" ColumnName="PrimaryProductLink_Category" />
+          <ScalarProperty Name="PrimaryProductLink_VRecID" ColumnName="PrimaryProductLink_VRecID" />
+          <ScalarProperty Name="IPCCContactLink" ColumnName="IPCCContactLink" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="PrimaryEmail" ColumnName="PrimaryEmail" />
+          <ScalarProperty Name="CaseAccount" ColumnName="CaseAccount" />
+          <ScalarProperty Name="EmpLink_RecID" ColumnName="EmpLink_RecID" />
+          <ScalarProperty Name="EmpLink_Category" ColumnName="EmpLink_Category" />
+          <ScalarProperty Name="EmpLink_VRecID" ColumnName="EmpLink_VRecID" />
+          <ScalarProperty Name="McMAtRisk" ColumnName="McMAtRisk" />
+          <ScalarProperty Name="McMProduct" ColumnName="McMProduct" />
+          <ScalarProperty Name="McMProduct_Valid" ColumnName="McMProduct_Valid" />
+          <ScalarProperty Name="BugzillaProduct" ColumnName="BugzillaProduct" />
+          <ScalarProperty Name="BugzillaComponent" ColumnName="BugzillaComponent" />
+          <ScalarProperty Name="McM_AutoClosedDateTime" ColumnName="McM_AutoClosedDateTime" />
+          <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+          <ScalarProperty Name="McM_data_center" ColumnName="McM_data_center" />
+          <ScalarProperty Name="BugzillaBank" ColumnName="BugzillaBank" />
+          <ScalarProperty Name="McM_Anonymous_Flag" ColumnName="McM_Anonymous_Flag" />
+          <ScalarProperty Name="McM_Sent_From_Email" ColumnName="McM_Sent_From_Email" />
+          <ScalarProperty Name="McM_Sent_To_Email" ColumnName="McM_Sent_To_Email" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Department_Valid" ColumnName="Department_Valid" />
+          <ScalarProperty Name="McM_csi" ColumnName="McM_csi" />
+          <ScalarProperty Name="AccountLink_RecID" ColumnName="AccountLink_RecID" />
+          <ScalarProperty Name="AccountLink_Category" ColumnName="AccountLink_Category" />
+          <ScalarProperty Name="AccountLink_VRecID" ColumnName="AccountLink_VRecID" />
+          <ScalarProperty Name="McMGridRowColor" ColumnName="McMGridRowColor" />
+          <ScalarProperty Name="McM_DateTime_Active" ColumnName="McM_DateTime_Active" />
+          <ScalarProperty Name="McM_DateTime_InProgress" ColumnName="McM_DateTime_InProgress" />
+          <ScalarProperty Name="McM_DateTime_Resolved" ColumnName="McM_DateTime_Resolved" />
+          <ScalarProperty Name="McM_DateTime_Closed" ColumnName="McM_DateTime_Closed" />
+          <ScalarProperty Name="McM_Duration_from_Active" ColumnName="McM_Duration_from_Active" />
+          <ScalarProperty Name="McM_Duration_from_Logged" ColumnName="McM_Duration_from_Logged" />
+          <ScalarProperty Name="McM_Duration_from_InProgress" ColumnName="McM_Duration_from_InProgress" />
+          <ScalarProperty Name="McM_Duration_from_Resolved" ColumnName="McM_Duration_from_Resolved" />
+          <ScalarProperty Name="McM_Twenty_Mins_from_Logged" ColumnName="McM_Twenty_Mins_from_Logged" />
+          <ScalarProperty Name="McM_ML_Connection" ColumnName="McM_ML_Connection" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="EOY" ColumnName="EOY" />
+          <ScalarProperty Name="NightCall" ColumnName="NightCall" />
+          <ScalarProperty Name="UsedOverride" ColumnName="UsedOverride" />
+          <ScalarProperty Name="MaintCustData" ColumnName="MaintCustData" />
+          <ScalarProperty Name="WebexUsed" ColumnName="WebexUsed" />
+          <ScalarProperty Name="McM_DateTime_Reopened" ColumnName="McM_DateTime_Reopened" />
+          <ScalarProperty Name="McM_Twenty_Mins" ColumnName="McM_Twenty_Mins" />
+          <ScalarProperty Name="McM_Reopened_Flag" ColumnName="McM_Reopened_Flag" />
+          <ScalarProperty Name="McM_Confidential" ColumnName="McM_Confidential" />
+          <ScalarProperty Name="McM_Note_Alert" ColumnName="McM_Note_Alert" />
+          <ScalarProperty Name="McM_Fifteen_Mins_from_Logged" ColumnName="McM_Fifteen_Mins_from_Logged" />
+          <ScalarProperty Name="McM_WaitStatus_Alert" ColumnName="McM_WaitStatus_Alert" />
+          <ScalarProperty Name="Speed_dial" ColumnName="Speed_dial" />
+          <ScalarProperty Name="McM_SetupTraining" ColumnName="McM_SetupTraining" />
+          <ScalarProperty Name="McM_Twenty_Mins_Logical" ColumnName="McM_Twenty_Mins_Logical" />
+          <ScalarProperty Name="McM_Fifteen_Mins_Logical" ColumnName="McM_Fifteen_Mins_Logical" />
+          <ScalarProperty Name="McM_QandD_Logical" ColumnName="McM_QandD_Logical" />
+          <ScalarProperty Name="McM_QandD_Text" ColumnName="McM_QandD_Text" />
+          <ScalarProperty Name="McM_Secon_Level_Support" ColumnName="McM_Secon_Level_Support" />
+          <ScalarProperty Name="McM_Programming_Assistance" ColumnName="McM_Programming_Assistance" />
+          <ScalarProperty Name="McM_Training_logical" ColumnName="McM_Training_logical" />
+          <ScalarProperty Name="McM_Projects_logical" ColumnName="McM_Projects_logical" />
+          <ScalarProperty Name="McM_Verifications_logical" ColumnName="McM_Verifications_logical" />
+          <ScalarProperty Name="McM_Deployment_logical" ColumnName="McM_Deployment_logical" />
+          <ScalarProperty Name="McM_AtRiskReason_Text" ColumnName="McM_AtRiskReason_Text" />
+          <ScalarProperty Name="McM_Cause" ColumnName="McM_Cause" />
+          <ScalarProperty Name="McM_Cause_Valid" ColumnName="McM_Cause_Valid" />
+          <ScalarProperty Name="CaseSurveySent" ColumnName="CaseSurveySent" />
+          <ScalarProperty Name="TransferLogical" ColumnName="TransferLogical" />
+          <ScalarProperty Name="McM_BugNumber" ColumnName="McM_BugNumber" />
+          <ScalarProperty Name="McM_BillPay_Customer" ColumnName="McM_BillPay_Customer" />
+          <ScalarProperty Name="McM_IS_Tech" ColumnName="McM_IS_Tech" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

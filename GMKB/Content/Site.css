@@ -1,0 +1,130 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.buffer {
+    padding-left: 15px;
+}
+
+.results {
+    border-style: solid;
+    border-width:3px;
+    border-color:#000;
+    border-radius:8px;          
+}
+
+.table tbody > tr > th {
+    border-bottom: solid 2px #ccc;
+    border-top:none;
+    border-radius:8px;
+}
+
+.table tbody > tr > td {
+    border-bottom: solid 2px #ccc;
+    border-top:none;
+    border-radius:8px;
+}
+
+.table tbody > tr > td, .table tbody > tr > th {
+    border-right:solid 1px #ccc;
+    border-radius:8px;
+}
+
+    .table tbody > tr > td:last-child, .table tbody > tr > th:last-child {
+        border-right:none;
+    }
+
+.headimage{
+    width:129px;
+    height:50px;
+}
+
+.title{
+    padding-bottom: 15px;
+}
+
+.pagination-container{
+    text-align:center;
+}
+
+.pagination > .active > a{
+    background-color:#f15c22;
+    border-color:#f15c22;
+}
+
+a {
+    color:#000000;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #f15c22;
+  color:#fff;
+  border-color:#ccc;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #ffffff;
+  cursor: default;
+  background-color: #f15c22;
+  border-color: #ccc;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #fff;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+#boxes{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.slamleft{
+    float:left; 
+    padding-left:15px;
+}
+
+.slamright{
+    float:right; 
+    padding-right:20px;
+
+}
+
+.center {
+    text-align:center;
+}

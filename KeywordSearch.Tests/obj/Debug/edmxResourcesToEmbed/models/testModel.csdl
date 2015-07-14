@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaturnModelUnitTest" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="RecId" />
+    </Key>
+    <Property Name="RecId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="LastModDateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Owner" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Owner_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerTeam" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerTeam_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="CaseNumber" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="Status" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Status_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Priority" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Priority_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="CaseType" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="CaseType_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Category_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Source_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DueOn" Type="DateTime" Precision="3" />
+    <Property Name="DueOn_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="CauseCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CauseCode_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCallResolution" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCallResolution_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="ResolutionCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ResolutionCategory_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="ContactLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="ContactLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="ContactLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="ContactEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ContactExt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ClosedBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ClosedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="PrimaryProductLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryProductLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryProductLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="IPCCContactLink" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CaseAccount" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="EmpLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="EmpLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="EmpLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="McMAtRisk" Type="Boolean" />
+    <Property Name="McMProduct" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McMProduct_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="BugzillaProduct" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BugzillaComponent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McM_AutoClosedDateTime" Type="DateTime" Precision="3" />
+    <Property Name="OwnerEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="McM_data_center" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BugzillaBank" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Anonymous_Flag" Type="Boolean" />
+    <Property Name="McM_Sent_From_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Sent_To_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="Department_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="McM_csi" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="AccountLink_RecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="AccountLink_Category" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+    <Property Name="AccountLink_VRecID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="McMGridRowColor" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McM_DateTime_Active" Type="DateTime" Precision="3" />
+    <Property Name="McM_DateTime_InProgress" Type="DateTime" Precision="3" />
+    <Property Name="McM_DateTime_Resolved" Type="DateTime" Precision="3" />
+    <Property Name="McM_DateTime_Closed" Type="DateTime" Precision="3" />
+    <Property Name="McM_Duration_from_Active" Type="Int32" />
+    <Property Name="McM_Duration_from_Logged" Type="Int32" />
+    <Property Name="McM_Duration_from_InProgress" Type="Int32" />
+    <Property Name="McM_Duration_from_Resolved" Type="Int32" />
+    <Property Name="McM_Twenty_Mins_from_Logged" Type="DateTime" Precision="3" />
+    <Property Name="McM_ML_Connection" Type="Boolean" />
+    <Property Name="ApprovedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EOY" Type="Boolean" />
+    <Property Name="NightCall" Type="Boolean" />
+    <Property Name="UsedOverride" Type="Boolean" />
+    <Property Name="MaintCustData" Type="Boolean" />
+    <Property Name="WebexUsed" Type="Boolean" />
+    <Property Name="McM_DateTime_Reopened" Type="DateTime" Precision="3" />
+    <Property Name="McM_Twenty_Mins" Type="DateTime" Precision="3" />
+    <Property Name="McM_Reopened_Flag" Type="Boolean" />
+    <Property Name="McM_Confidential" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Note_Alert" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Fifteen_Mins_from_Logged" Type="DateTime" Precision="3" />
+    <Property Name="McM_WaitStatus_Alert" Type="DateTime" Precision="3" />
+    <Property Name="Speed_dial" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="McM_SetupTraining" Type="Boolean" />
+    <Property Name="McM_Twenty_Mins_Logical" Type="Boolean" />
+    <Property Name="McM_Fifteen_Mins_Logical" Type="Boolean" />
+    <Property Name="McM_QandD_Logical" Type="Boolean" />
+    <Property Name="McM_QandD_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Secon_Level_Support" Type="Boolean" />
+    <Property Name="McM_Programming_Assistance" Type="Boolean" />
+    <Property Name="McM_Training_logical" Type="Boolean" />
+    <Property Name="McM_Projects_logical" Type="Boolean" />
+    <Property Name="McM_Verifications_logical" Type="Boolean" />
+    <Property Name="McM_Deployment_logical" Type="Boolean" />
+    <Property Name="McM_AtRiskReason_Text" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Cause" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McM_Cause_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="CaseSurveySent" Type="Boolean" />
+    <Property Name="TransferLogical" Type="Boolean" />
+    <Property Name="McM_BugNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="McM_BillPay_Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="McM_IS_Tech" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="SaturnEntitiesTest" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cases" EntityType="Self.Case" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,112 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<GMKB.Models.Case>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="col-md-12 title">
+
+    <img src="~/Content/images/CSI.png" class="col-md-6 headimage" />
+    <h2 class="col-md-6 title">Goldmine Knowledge Base</h2>
+</div>
+<p>
+    <br /><br /><br />
+    @using (Html.BeginForm("Index", "Cases", FormMethod.Get))
+    {
+        <div class="row">
+            <div id="boxes">
+                <span class="slamleft">
+                    <label>Step 1:</label>&nbsp;@Html.DropDownList("caseProduct", "-- Select a Product --")
+                    &nbsp;<label>Step 2: </label>&nbsp;@Html.DropDownList("caseType", "-- Select a Type --")
+                    &nbsp;<label>Step 3: </label>&nbsp;@Html.DropDownList("caseCategory", "-- Select a Category --")
+                </span>
+
+                <span class="slamright">
+                    <label>Keyword:</label> &nbsp;@Html.TextBox("SearchString")
+                    <input type="submit" value="Search" />
+                </span>
+            </div>
+        </div>
+
+
+    }
+
+</p>
+<div class="results">
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().CaseNumber)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().McMProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().CaseType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Category)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().Description)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.First().Resolution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().McM_DateTime_Resolved)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    
+                    @item.CaseNumber.Value
+                    @*@Html.DisplayFor(item.CaseNumber.Value)*@
+                    
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.McMProduct)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CaseType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resolution)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.McM_DateTime_Resolved)
+                </th>
+
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new
+{
+    page,
+    searchString = Request.QueryString["searchString"],
+    caseProduct = Request.QueryString["caseProduct"],
+    caseType = Request.QueryString["caseType"],
+    caseCategory = Request.QueryString["caseCategory"]
+}), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded })
+</div>
+
+<script>
+
+</script>

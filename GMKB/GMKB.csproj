@@ -1,0 +1,1186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82C84B72-23DD-4354-AD0D-C6FF9E34B34F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMKB</RootNamespace>
+    <AssemblyName>GMKB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\ICaseRepository.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Concrete\EFSaturnCaseRepository.cs" />
+    <Compile Include="Controllers\CasesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountIndustry.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountOrder.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountServiceContractAggr.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Activity.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityLocation.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityPriority.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityPurpose.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityResult.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Address.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressCountry.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressLocale.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressPurpose.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressState.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AggrOpptyStageTransition.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AggrSalesRepDiscount.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AlternatePricing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Attachment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AuditHistory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AverageDealSize.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BundleItem.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Campaign.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignCategory1.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignKeyCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignOverview.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignTarget.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignTask.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignTaskNotificationConfig.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignTemplate.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampaignType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Case.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseCaus.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseCauseCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseResolutionCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseSource.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CaseType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cell.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CertificatePrerequisite.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Certification.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompetitionRating.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompetitionStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competitor.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConfigOpportunityProductLine.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactSource.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contract.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContractTab.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContractType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrencyCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrencySymbol.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DebitCardInstantIssue.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepositPlatform.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Discount.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiscountType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DracoActivity.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DracoActivityFactory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Email.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailFormat.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeForecastEmp.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeForecastTerritory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeOpptyTerritory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeQuotaEmployee.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeQuotaTerritory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExchangeRate.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FMgmtDashBoard.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Forecast.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ForecastAdjustment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ForecastStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionAppDef.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionAppDefDelete.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionApplication.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionAsd.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionAttachment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionBusProc.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionCounter.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionCounterRanx.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionDef.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionDefDelete.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionDictionary.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionImage.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionLink.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionQueryGroup.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionQuickAction.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionReport.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionSecMap.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionSessionTracker.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionSetting.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionUpdatePackage.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionUser.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FusionVersion.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GA_AlertHist.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GA_Alerts.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GA_DepartmentReports.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GA_Settings.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GoldMine.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoldMine.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GoldMine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GoldMine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoldMine.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Influencer.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Influencer1.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InfluencerRating.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InfluencerResponseMode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InfluencerType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Issue.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IssueStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobClass.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobTitile.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lead.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadCompanySize.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadQualQuestion.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadRoutingConfiguration.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadSource.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadStatusforEmployee.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeadTimeToPurchase.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoanPlatform.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MailingList.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Manufacturer.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketingListMember.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketSegment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMAccountManager.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBankMapping.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBankPerformance.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBankVisitReport.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBugzilla.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBugzillaComponent.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMBugzillaProduct.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMProcessEvent.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMProduct.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMReleaseVersion.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McMType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McM_AuditHistory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McM_Charter_Code.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McM_Core_Type.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\McM_ProductTab.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Methodology.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Month_Valid.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NAICSCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Note.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NoteType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notification.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Offering.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Opportunity.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityAlertConfiguration.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityLeadRating.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityProductLine.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityProductType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunitySource.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityStageTransition.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityTemplate.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpptyProduct.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ownership.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PainPoint.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PainPoint_Valid.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Partner.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerCertification.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerContact.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerContract.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerLevel.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerMargin.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartnerStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permission.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PermissionStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pricing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PricingInstruction.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PricingType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Priority.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductACH.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductALM.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductATM.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductBillPay.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductBranchCapture.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductBSA.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductBSAUDIT.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCategory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCheckImageSystem.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCheckRecovery.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCheckWriter.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCIP.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCllReport.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCommline.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCRInterface.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCRM.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCVCAL.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDebitCard.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDeposit.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDisasterCommLine.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDLinksCreditTracking.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDocumentStorage.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDRService.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductEmailStatement.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductEnotice.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductEsafeBrand.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductFinCEN.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductHotSite.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIMarketingSub.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIMobileApp.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductInt.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIntCashMgmt.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIntDesign.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductInternet.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIntPositivePay.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIntProvider.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductIPFM.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductLine.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductLoanPricing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductLoansPlu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductMerchantCapture.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductMerchService.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductMLAlert.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductMobileBanking.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductMSIStatement.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductNetAudit.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductNetBackup.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductNetManagement.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductOFAC.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductOriginationACH.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductPCEncryption.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductPinnedPOS.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductPrft.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductProfitability.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductRealtimeDenial.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductRegCC.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductRemittanceProcessing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductRewardsChecking.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductSecAudit.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductSecureEm.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductStmtPrint.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductSupp.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductTeller.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductTrain.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductUnxBkup.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductVenMgmt.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductVoice.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductWebAudit.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductWre.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Profile.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfileDegree.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfileDepartment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfilePrefix.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfileStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfileSuffix.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Program.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProgramLevel.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QualQuestion.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QualQuestionAnswer.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Quarter_Valid.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QueuedUpdate.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Quota.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Quote.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuoteApprovalConfiguration.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuoteStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rating.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReasonCode.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RecurringRevenue.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RecurringRevenueByTerritory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Referral.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReferralType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Region.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Response.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RevenueType.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RMA.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RMAReason.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesActivity.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalesTerritory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ScheduledJob.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ScheduledJobHistory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Seed.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Segment.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServerInformation.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ServiceContract.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Skill.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stage.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StandardForecast.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StandardUserTeam.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subscription.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubscriptionDestination.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SuppressionList.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Team.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeamMember.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TeamMemberRole.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Territory.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TerritoryPricing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TimeUnit.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserPresence.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vendor.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VendorStatu.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VolumeBasedPricing.cs">
+      <DependentUpon>GoldMine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\CSI.png" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\GoldMine.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GoldMine.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\GoldMine.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoldMine.edmx</DependentUpon>
+      <LastGenOutput>GoldMine.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\GoldMine.edmx.diagram">
+      <DependentUpon>GoldMine.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\GoldMine.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GoldMine.edmx</DependentUpon>
+      <LastGenOutput>GoldMine.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Cases\Index.cshtml" />
+    <Content Include="Views\Cases\KeywordResults.cshtml" />
+    <Content Include="Views\Cases\FilterResults.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48529</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48529/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
